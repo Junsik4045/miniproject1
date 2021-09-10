@@ -28,7 +28,6 @@
 
 
     <dependencies>
-
         <!--MySQL-->
         <dependency>
             <groupId>mysql</groupId>

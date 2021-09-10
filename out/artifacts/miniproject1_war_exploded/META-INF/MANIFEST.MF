@@ -1,5 +1,5 @@
 Manifest-Version: 1.0
+Built-By: 나
 Created-By: IntelliJ IDEA
-Built-By: junsik
-Build-Jdk: 11.0.11
+Build-Jdk: 11
 

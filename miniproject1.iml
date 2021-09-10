@@ -11,7 +11,6 @@
         </webroots>
         <sourceRoots>
           <root url="file://$MODULE_DIR$/src/main/java" />
-          <root url="file://$MODULE_DIR$/src/main/resources" />
         </sourceRoots>
       </configuration>
       <facet type="webservices" name="WebServices">
@@ -19,7 +18,18 @@
       </facet>
     </facet>
     <facet type="Spring" name="Spring">
-      <configuration />
+      <configuration>
+        <fileset id="web application context" name="MVC application context" removed="true">
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/root-context.xml</file>
+        </fileset>
+        <fileset id="web dispatcher servlet context" name="MVC dispatcher servlet context" removed="true">
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/servlet-context.xml</file>
+        </fileset>
+        <fileset id="fileset" name="Spring Application Context" removed="false">
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/root-context.xml</file>
+          <file>file://$MODULE_DIR$/web/WEB-INF/spring/servlet-context.xml</file>
+        </fileset>
+      </configuration>
     </facet>
   </component>
 </module>
