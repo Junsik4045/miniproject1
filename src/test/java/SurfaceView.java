@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
+import java.util.Collection;
 import java.util.Scanner;
 
 
@@ -20,12 +21,16 @@ public class SurfaceView {
 
     @Test
     public void selectAll(){
-
+        sqlSessionTemplate.selectList(namespace+".selectBoardAll")
+        .stream()
+        .forEach(System.out::println);
     }
 
     @Test
     public void selectOne(){
-
+        sqlSessionTemplate.selectList(namespace+".selectBoard",2)
+        .stream()
+        .forEach(System.out::println);
     }
 
     @Test
@@ -43,8 +48,6 @@ public class SurfaceView {
     public void remove(){
         sqlSessionTemplate.delete(namespace+".deleteBoard",1);
     }
-
-
 
     
 }
