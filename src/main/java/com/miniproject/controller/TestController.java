@@ -9,6 +9,6 @@ public class TestController {
 
     @RequestMapping(value = "/main")
     public String hello(){
-        return "index";
+        return "main";
     }
 }
