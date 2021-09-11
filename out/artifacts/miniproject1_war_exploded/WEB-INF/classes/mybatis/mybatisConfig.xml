@@ -4,6 +4,6 @@
 
 <configuration>
     <typeAliases>
-        <typeAlias alias="UserVO" type="com.miniprojcet.entity.BoardDao" />
+        <typeAlias alias="Board" type="com.miniproject.entity.Board" />
     </typeAliases>
 </configuration>
