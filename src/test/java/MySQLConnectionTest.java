@@ -2,7 +2,6 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mybatis.spring.SqlSessionTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
@@ -12,7 +11,7 @@ import java.sql.Connection;
 import java.util.List;
 
 
-@RunWith(SpringJUnit4ClassRunner.class)
+/*@RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"file:web/WEB-INF/spring/root-context.xml"})
 public class MySQLConnectionTest {
 
@@ -34,6 +33,6 @@ public class MySQLConnectionTest {
             System.out.println("실패");
         }
     }
-}
+}*/
 
 

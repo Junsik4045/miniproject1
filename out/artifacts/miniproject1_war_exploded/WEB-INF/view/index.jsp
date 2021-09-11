@@ -6,11 +6,19 @@
   To change this template use File | Settings | File Templates.
 --%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib uri="http://tiles.apache.org/tags-tiles"  prefix="tiles"%>
 <html>
   <head>
     <title>$Title$</title>
+    <tiles:insertAttribute name="loadFile"/>
   </head>
   <body>
-  $END$
+    <div id="wrap">
+      <div id="nav"><tiles:insertAttribute name="header"/></div>
+      <div id="left"><tiles:insertAttribute name="left"/></div>
+      <div id="body"><tiles:insertAttribute name="body"/></div>
+      <div id="footer"><tiles:insertAttribute name="footer"/></div>
+    </div>
   </body>
 </html>
