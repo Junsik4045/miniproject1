@@ -5,6 +5,6 @@
 <configuration>
 
     <typeAliases>
-        <typeAlias alias="Board" type="com.miniproject.entity.Board" />
+        <typeAlias alias="Board" type="com.miniproject.entity.board.Board" />
     </typeAliases>
 </configuration>

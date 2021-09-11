@@ -4,7 +4,7 @@
 
 <mapper namespace="boardDB">
     <select id="selectBoardAll" resultType="map">
-        select * from Board;
+        select * from Board orders limit 0, 2;
     </select>
 
     <select id="selectBoard" parameterType="int" resultType="map">
@@ -15,7 +15,7 @@
         select count(*) Board;
     </select>
 
-    <insert id="insertBoard" parameterType="com.miniproject.entity.Board">
+    <insert id="insertBoard" parameterType="com.miniproject.entity.board.BoardDto">
         insert into Board(board_category, board_title, board_content, board_regDate, board_vote, board_subscribe, board_writer, board_header)
         values(#{category}, #{title}, #{content}, now(), 0, 0, #{writer}, #{header});
     </insert>
@@ -23,5 +23,8 @@
     <delete id="deleteBoard" parameterType="int">
         delete from Board where board_no=#{id}
     </delete>
-
+    
+    <update id="updateBoard" parameterType="com.miniproject.entity.board.BoardDto">
+        update Board set
+    </update>
 </mapper>

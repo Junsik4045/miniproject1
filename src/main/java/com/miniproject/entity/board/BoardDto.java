@@ -1,11 +1,11 @@
-package com.miniproject.entity;
+package com.miniproject.entity.board;
 
 import lombok.Data;
 
 import java.time.LocalDateTime;
 
 @Data
-public class Board {
+public class BoardDto implements Board{
     private int board_no;
     private int comment_no;
     private int file_no;
@@ -17,15 +17,6 @@ public class Board {
     private int subscribe;
     private String writer;
     private String header;
-
-    @Override
-    public boolean equals(Object obj){
-        if(obj instanceof Board){
-            Board board = (Board)obj;
-            return board_no == board.getBoard_no();
-        }
-        return false;
-    }
 
     @Override
     public int hashCode(){
@@ -47,4 +38,18 @@ public class Board {
                 "header : "+header;
     }
 
+    @Override
+    public void board_no(int board_no) {
+        setBoard_no(board_no);
+    }
+
+    @Override
+    public void comment_no(int comment_no) {
+        setComment_no(comment_no);
+    }
+
+    @Override
+    public void file_no(int file_no) {
+        setFile_no(file_no);
+    }
 }

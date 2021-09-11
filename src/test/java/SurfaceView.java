@@ -1,4 +1,5 @@
-import com.miniproject.entity.Board;
+import com.miniproject.entity.board.Board;
+import com.miniproject.entity.board.BoardDto;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mybatis.spring.SqlSessionTemplate;
@@ -6,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
-import java.util.Collection;
-import java.util.Scanner;
+import java.util.HashMap;
+import java.util.Map;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -35,18 +36,30 @@ public class SurfaceView {
 
     @Test
     public void insert(){
-        Board board = new Board();
-        board.setCategory("테스트");
-        board.setTitle("타이틀");
-        board.setContent("내용");
-        board.setWriter("테스터가");
-        board.setHeader("주의사항");
-        sqlSessionTemplate.insert(namespace+".insertBoard",board);
+        BoardDto boardDto = new BoardDto();
+        boardDto.setCategory("테스트");
+        boardDto.setTitle("타이틀");
+        boardDto.setContent("내용");
+        boardDto.setWriter("테스터가");
+        boardDto.setHeader("주의사항");
+        sqlSessionTemplate.insert(namespace+".insertBoard",boardDto);
     }
 
     @Test
-    public void remove(){
+    public void delete(){
         sqlSessionTemplate.delete(namespace+".deleteBoard",1);
+    }
+
+    @Test
+    public void update(){
+        BoardDto boardDto = new BoardDto();
+        boardDto.setCategory("테스트");
+        boardDto.setTitle("타이틀");
+        boardDto.setContent("내용");
+        boardDto.setWriter("테스터가");
+        boardDto.setHeader("주의사항");
+
+        sqlSessionTemplate.update(namespace+".updateBoard",boardDto);
     }
 
     
